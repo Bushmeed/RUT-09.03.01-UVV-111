@@ -36,26 +36,26 @@ int main()
     cin >> T >> F >> H >> FH >> TH;
     Cash.Initialization(I,T,F,H,FH,TH);
 Menu:
-    cout << "*** MENU *** \n";
+    cout << '\n' << "*** MENU *** \n";
     cout <<"1. ATM Info \n" <<"2. Put Money \n" << "3. Withdraw Money \n" << "4. Exit \n";
     int D;  cin >> D;
     if (D == 2)
     {
-        cout << "_PUT MONEY_ \n" << "Your Bills: Ten, Fifty, Hundred, Five Hundred, Thousand \n";
+        cout << '\n'  << "_PUT MONEY_ \n" << "Your Bills: Ten, Fifty, Hundred, Five Hundred, Thousand \n";
         cin >> T >> F >> H >> FH >> TH;
         Cash.Input(T, F, H, FH, TH);
         goto Menu;
     }
     if (D == 3)
     {
-        cout << "_WITHDRAW MONEY_ \n" << "How Many Bills: Ten, Fifty, Hundred, Five Hundred, Thousand \n";
+        cout << '\n' << "_WITHDRAW MONEY_ \n" << "How Many Bills: Ten, Fifty, Hundred, Five Hundred, Thousand \n";
         cin >> T >> F >> H >> FH >> TH;
         Cash.Output(T, F, H, FH, TH);
         goto Menu;
     }
     if (D == 1)
     {
-        cout << "_ATM INFO_ \n" << "ATM id: " << Cash.Id << '\n' << "Available Money: " << Cash.All << '\n';
+        cout << '\n' << "_ATM INFO_ \n" << "ATM id: " << Cash.Id << '\n' << "Available Money: " << Cash.All << '\n';
         goto Menu;
     }
     if (D == 4)
